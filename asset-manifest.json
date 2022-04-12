@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pug-card-memory-game-ts/static/css/main.a7a9531c.css",
+    "main.js": "/pug-card-memory-game-ts/static/js/main.3af0937a.js",
+    "static/media/card_back.jpg": "/pug-card-memory-game-ts/static/media/card_back.3de0a9bfaf628ed2cd48.jpg",
+    "static/media/card_2.jpg": "/pug-card-memory-game-ts/static/media/card_2.58c50dce8584977fc946.jpg",
+    "static/media/card_1.jpg": "/pug-card-memory-game-ts/static/media/card_1.8aed8f6006e5c39af5c4.jpg",
+    "static/media/card_3.jpg": "/pug-card-memory-game-ts/static/media/card_3.9041d2b7963c3fa36558.jpg",
+    "static/media/card_7.jpg": "/pug-card-memory-game-ts/static/media/card_7.57474aed82002a5323e0.jpg",
+    "static/media/card_5.jpg": "/pug-card-memory-game-ts/static/media/card_5.17e477dcd4a46a8d2915.jpg",
+    "static/media/card_6.jpg": "/pug-card-memory-game-ts/static/media/card_6.f7281cf1a4747f76e84f.jpg",
+    "static/media/card_4.jpg": "/pug-card-memory-game-ts/static/media/card_4.fef3b230919bcb2546be.jpg",
+    "static/media/card_8.jpg": "/pug-card-memory-game-ts/static/media/card_8.2b3e509214a074779b1e.jpg",
+    "index.html": "/pug-card-memory-game-ts/index.html",
+    "main.a7a9531c.css.map": "/pug-card-memory-game-ts/static/css/main.a7a9531c.css.map",
+    "main.3af0937a.js.map": "/pug-card-memory-game-ts/static/js/main.3af0937a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7a9531c.css",
+    "static/js/main.3af0937a.js"
+  ]
+}
