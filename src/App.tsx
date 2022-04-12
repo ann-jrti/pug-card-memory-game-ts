@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createBoard } from './setup';
 import { Grid } from './App.styles';
 import { CardType } from './setup';
@@ -12,16 +12,26 @@ const App = () => {
   const [clickedCard, setClickedCard] = useState<undefined | CardType>(
     undefined
   );
-  const wait = 1000;
+  const displayWin = () => {};
+
+  useEffect(() => {
+    if (matchedPairs === cards.length / 2) {
+      console.log('game won');
+      setGameWon(true);
+    }
+  }, [matchedPairs]);
+
+  const wait = 500;
 
   const handleCardClick = (currentCard: CardType) => {
     //flips the clicked card
     setCards((prev) =>
-      prev.map((card) =>
-        card.id === currentCard.id
+      prev.map((card) => {
+        console.log(card.id, currentCard.id);
+        return card.id === currentCard.id
           ? { ...card, flipped: true, clickable: false }
-          : card
-      )
+          : card;
+      })
     );
     //if is the firs card flipped we keep it flipped
     if (!clickedCard) {
