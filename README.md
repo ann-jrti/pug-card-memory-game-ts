@@ -4,4 +4,4 @@
 
 [https://ann-jrti.github.io/pug-card-memory-game-ts/](https://ann-jrti.github.io/pug-card-memory-game-ts/)
 
-<img width="1421" alt="pug-game-screenshot" src="https://user-images.githubusercontent.com/84371647/162977036-4017bba8-6062-4844-ab83-166010e1f9e0.png">
+<img width="1291" alt="pug-game-screenshot" src="https://user-images.githubusercontent.com/84371647/163073398-3508bae8-c37b-4a8a-91f4-9d66ddb03df8.png">
