@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { createBoard } from './setup';
-import { Grid } from './App.styles';
-import { CardType } from './setup';
+import { createBoard, CardType } from './setup';
+import { Grid, Attribution, GridContainer } from './App.styles';
 import { shuffleArray } from './utils';
 import { Card } from './components/Card/Card';
 import { Header } from './components/Header/Header';
@@ -66,16 +65,19 @@ const App = () => {
   return (
     <div>
       <Header></Header>
-
-      <Grid>
-        {cards.map((card) => (
-          <Card key={card.id} card={card} callback={handleCardClick} />
-        ))}
-      </Grid>
-      <a href="https://www.freepik.com/vectors/pet-illustration">
-        Back card image illustration created by catalyststuff and retrieved from
-        www.freepik.com
-      </a>
+      <GridContainer>
+        <Grid>
+          {cards.map((card) => (
+            <Card key={card.id} card={card} callback={handleCardClick} />
+          ))}
+        </Grid>
+      </GridContainer>
+      <Attribution
+        target="_blank"
+        href="https://www.freepik.com/vectors/pet-illustration"
+      >
+        Back card image illustration created by catalyststuff - www.freepik.com
+      </Attribution>
       <WinModal display={gameWon} />
     </div>
   );

@@ -8,9 +8,10 @@ export const WrapperWinModal = styled.div<Props>`
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 2rem;
   transform: translate(-50%, -50%);
-  width: 40%;
-  height: 40%;
+  width: 20%;
+  height: 30%;
   background-color: #fcfdfe;
   border: 3px solid #1F212B;
   display: ${(props) => (props.display ? 'flex' : 'none')};
@@ -25,10 +26,15 @@ export const WrapperWinModal = styled.div<Props>`
 
 export const PlayAgainBtn = styled.button`
   border: none;
-  background-color: #d6b105;
-  padding: 0.5rem;
+  background-color: #e9d266;
+  padding: 0.8rem;
   border-radius: 5px;
   color: #1f212b;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const WinTitle = styled.h1`
