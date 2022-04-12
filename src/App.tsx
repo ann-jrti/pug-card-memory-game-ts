@@ -4,6 +4,8 @@ import { Grid } from './App.styles';
 import { CardType } from './setup';
 import { shuffleArray } from './utils';
 import { Card } from './components/Card/Card';
+import { Header } from './components/Header/Header';
+import { WinModal } from './components/WinModal/WinModal';
 
 const App = () => {
   const [cards, setCards] = useState<CardType[]>(shuffleArray(createBoard()));
@@ -21,13 +23,12 @@ const App = () => {
     }
   }, [matchedPairs]);
 
-  const wait = 500;
+  const wait = 800;
 
   const handleCardClick = (currentCard: CardType) => {
     //flips the clicked card
     setCards((prev) =>
       prev.map((card) => {
-        console.log(card.id, currentCard.id);
         return card.id === currentCard.id
           ? { ...card, flipped: true, clickable: false }
           : card;
@@ -66,14 +67,18 @@ const App = () => {
 
   return (
     <div>
-      <a href="https://www.freepik.com/vectors/pet-illustration">
-        Pet illustration vector created by catalyststuff - www.freepik.com
-      </a>
+      <Header></Header>
+
       <Grid>
         {cards.map((card) => (
           <Card key={card.id} card={card} callback={handleCardClick} />
         ))}
       </Grid>
+      <a href="https://www.freepik.com/vectors/pet-illustration">
+        Back card image illustration created by catalyststuff and retrieved from
+        www.freepik.com
+      </a>
+      {gameWon ? <WinModal></WinModal> : null}
     </div>
   );
 };

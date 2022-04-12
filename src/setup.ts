@@ -29,12 +29,16 @@ const cards: string[] = [
 ];
 
 export const createBoard = (): CardType[] =>
-  [...cards, ...cards].map((card, i) => ({
-    id: `card${i}`,
-    flipped: false,
-    backImage: cardBack,
-    frontImage: card,
-    clickable: true,
-    matchingCardId:
-      i < cards.length ? `card${i + cards.length}` : `card${i - cards.length}`,
-  }));
+  [...cards, ...cards].map((card, i) => {
+    return {
+      id: `card${i}`,
+      flipped: false,
+      backImage: cardBack,
+      frontImage: card,
+      clickable: true,
+      matchingCardId:
+        i < cards.length
+          ? `card${i + cards.length}`
+          : `card${i - cards.length}`,
+    };
+  });
