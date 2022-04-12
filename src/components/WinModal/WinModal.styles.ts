@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const WrapperWinModal = styled.div`
+type Props = {
+  display: boolean;
+};
+
+export const WrapperWinModal = styled.div<Props>`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,7 +13,7 @@ export const WrapperWinModal = styled.div`
   height: 40%;
   background-color: #fcfdfe;
   border: 3px solid #1F212B;
-  display: flex;
+  display: ${(props) => (props.display ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: center;
   align-items: center;

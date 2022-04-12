@@ -14,16 +14,14 @@ const App = () => {
   const [clickedCard, setClickedCard] = useState<undefined | CardType>(
     undefined
   );
-  const displayWin = () => {};
 
   useEffect(() => {
     if (matchedPairs === cards.length / 2) {
-      console.log('game won');
       setGameWon(true);
     }
   }, [matchedPairs]);
 
-  const wait = 800;
+  const wait = 1000;
 
   const handleCardClick = (currentCard: CardType) => {
     //flips the clicked card
@@ -78,7 +76,7 @@ const App = () => {
         Back card image illustration created by catalyststuff and retrieved from
         www.freepik.com
       </a>
-      {gameWon ? <WinModal></WinModal> : null}
+      <WinModal display={gameWon} />
     </div>
   );
 };
